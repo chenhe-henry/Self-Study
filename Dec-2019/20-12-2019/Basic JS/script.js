@@ -19,7 +19,11 @@ console.log("-----------------------");
 const myBiceps = null;
 console.log(myBiceps);
 console.log("-----------------------");
-
+console.log(4 + 2);
+console.log("Hello World");
 console.log("-----------------------");
+let courseName = "S" + "E" + "I";
+console.log(courseName);
+let test;
 console.log("-----------------------");
 console.log("-----------------------");
