@@ -80,10 +80,10 @@ body {
 
 .heading-tertiary {
   text-transform: uppercase;
-  font-size: 2rem; }
+  font-size: 1.6rem; }
 
 .paragraph {
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 5rem; }
 
@@ -106,7 +106,7 @@ body {
   transition: all 0.4s;
   padding: 2rem 4rem;
   position: relative;
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
   .btn:link, .btn:visited {
     text-transform: uppercase; }
   .btn:hover {
@@ -140,9 +140,52 @@ body {
     /* backwards means the initial state only happens when the animation starts */
     animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #00c3ff;
+  border-bottom: 1px solid #00c3ff;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #00c3ff;
+  color: #fff;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn-text:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    z-index: 10;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transition: all 0.2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      z-index: 20;
+      transform: translateY(-1rem) scale(1.1);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      outline: 1.5rem solid #00c3ff; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }

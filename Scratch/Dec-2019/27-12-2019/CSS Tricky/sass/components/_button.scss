@@ -5,7 +5,7 @@
   transition: all 0.4s;
   padding: 2rem 4rem;
   position: relative;
-  font-size: 1.5rem;
+  font-size: $default-font-size;
 
   &:link,
   &:visited {
@@ -49,5 +49,27 @@
     animation: moveInBottom 0.5s ease-out 0.75s;
     /* backwards means the initial state only happens when the animation starts */
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: inline-block;
+    font-size: $default-font-size;
+    color: $color-blue;
+    border-bottom: 1px solid $color-blue;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $color-blue;
+    color: $color-white;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 }
