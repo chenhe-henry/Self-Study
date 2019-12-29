@@ -1,0 +1,105 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-12rem) rotate(0deg); }
+  80% {
+    transform: rotate(180deg); }
+  60% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(12rem); }
+  80% {
+    transform: rotate(-180deg); }
+  60% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+.text-primary {
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  color: #fff; }
+  .text-primary-main {
+    display: block;
+    font-size: 6rem;
+    animation: moveInLeft 3s ease-out 1s;
+    letter-spacing: 3rem; }
+  .text-primary-sub {
+    display: block;
+    font-size: 2rem;
+    animation: moveInRight 3s ease-out 1s;
+    letter-spacing: 1rem; }
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.4s;
+  padding: 2rem 4rem;
+  position: relative; }
+  .btn:link, .btn:visited {
+    text-transform: uppercase; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scale(2);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* transition  is always in the initial state */
+    transition: all 0.4s; }
+  .btn-white {
+    background-color: #fff;
+    color: #777; }
+    .btn-white::after {
+      background-color: #fff; }
+  .btn-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    /* backwards means the initial state only happens when the animation starts */
+    animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(238, 255, 0, 0.8), rgba(0, 195, 255, 0.8)), url("../img/digital_art_illustration_ali_008.jpg");
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 30% 100%, 0 80%); }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center; }

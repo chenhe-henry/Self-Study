@@ -1,0 +1,20 @@
+.text-primary {
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  color: $color-white;
+
+  &-main {
+    display: block;
+    font-size: 6rem;
+    animation: moveInLeft 3s ease-out 1s;
+    letter-spacing: 3rem;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    animation: moveInRight 3s ease-out 1s;
+    letter-spacing: 1rem;
+  }
+}
