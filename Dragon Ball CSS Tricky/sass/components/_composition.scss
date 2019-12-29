@@ -24,7 +24,7 @@
       z-index: 20;
       transform: translateY(-1rem) scale(1.1);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      outline: 1.5rem solid $color-blue;
+      outline: 1.5rem solid $color-yellow;
     }
   }
   &:hover &__photo:not(:hover) {
