@@ -31,26 +31,41 @@
     transform: translate(0); } }
 
 * {
-  box-sizing: border-box; }
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
   font-size: 62.5%; }
 
-.text-primary {
+body {
+  box-sizing: border-box; }
+
+.heading-primary {
   text-transform: uppercase;
   margin-bottom: 6rem;
   backface-visibility: hidden;
   color: #fff; }
-  .text-primary-main {
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     animation: moveInLeft 3s ease-out 1s;
     letter-spacing: 3rem; }
-  .text-primary-sub {
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     animation: moveInRight 3s ease-out 1s;
     letter-spacing: 1rem; }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 2rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
 
 .btn {
   text-decoration: none;
@@ -58,7 +73,8 @@ html {
   border-radius: 10rem;
   transition: all 0.4s;
   padding: 2rem 4rem;
-  position: relative; }
+  position: relative;
+  font-size: 1.5rem; }
   .btn:link, .btn:visited {
     text-transform: uppercase; }
   .btn:hover {
@@ -96,10 +112,17 @@ html {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(238, 255, 0, 0.8), rgba(0, 195, 255, 0.8)), url("../img/digital_art_illustration_ali_008.jpg");
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 30% 100%, 0 80%); }
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100vw 0, 100vw 75vh, 50vw 95vh, 30vw 95vh, 0 75vh); }
   .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
     text-align: center; }
+
+.section-about {
+  padding: 25rem 0;
+  margin-top: -20vh;
+  background-color: #f7f7f7; }
