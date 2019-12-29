@@ -5,11 +5,11 @@
       rgba($color-yellow, 0.8),
       rgba($color-blue, 0.8)
     ),
-    url("../img/digital_art_illustration_ali_008.jpg");
+    url("../img/goku-wallpaper-1.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100vw 0, 100vw 75vh, 50vw 95vh, 30vw 95vh, 0 75vh);
+  clip-path: polygon(0 0, 100vw 0, 100vw 95vh, 60vw 95vh, 0 75vh);
 
   &__text-box {
     position: absolute;
