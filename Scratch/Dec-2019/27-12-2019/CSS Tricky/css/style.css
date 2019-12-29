@@ -59,10 +59,35 @@ body {
 
 .heading-secondary {
   text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #00c3ff, #eeff00);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(5deg) skewX(15deg) scale(1.1);
+    text-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  text-transform: uppercase;
   font-size: 2rem; }
+
+.paragraph {
+  font-size: 1.5rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 5rem; }
 
 .u-center-text {
   text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 5rem; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
@@ -107,6 +132,23 @@ body {
     animation: moveInBottom 0.5s ease-out 0.75s;
     /* backwards means the initial state only happens when the animation starts */
     animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
 
 .header {
   height: 95vh;
