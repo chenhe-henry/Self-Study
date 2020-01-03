@@ -3,3 +3,27 @@
   margin-top: -20vh;
   background-color: $color-grey-light-1;
 }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-yellow, 0.8),
+      rgba($color-blue, 0.8)
+    ),
+    url("../img/goku-banner.png");
+  background-size: cover;
+  transform: skewY(7deg);
+  margin-top: -12rem;
+  // all direct children
+  & > * {
+    transform: skewY(-7deg);
+  }
+}
+
+.section-tours {
+  margin-top: 20rem;
+}
+
+.section-stories {
+}
